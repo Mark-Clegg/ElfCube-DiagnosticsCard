@@ -1,0 +1,21 @@
+GAL22V10
+I/O-Diag
+
+; 1    2     3     4     5     6     7     8     9     10    11    12
+  CLK  N1    N2    N3    N4    N5    N6    N7    IOR   IOW   TPB   GND
+  Q    QQ    INOUT Q7    Q6    Q5    Q4    Q3    Q2    Q1    QCLK  VCC
+; 13   14    15    16    17    18    19    20    21    22    23    24
+
+QCLK = N1 * N2 * N3 * N4 * N5 * N6 * N7 + IOR * IOW + /TPB
+Q1.R = N1
+Q2.R = N2
+Q3.R = N3
+Q4.R = N4
+Q5.R = N5
+Q6.R = N6
+Q7.R = N7
+QQ.R = /Q
+INOUT.R = IOR
+
+DESCRIPTION
+Capture state of N lines and Q during an I/O operation
